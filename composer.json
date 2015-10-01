@@ -1,0 +1,26 @@
+{
+  "name": "axiles89/amop-profiler",
+  "description": "Profiler for Amop project",
+  "keywords": [
+    "php",
+    "yii2",
+    "profiler",
+    "amop"
+  ],
+  "type": "library",
+  "license": "Public Domain",
+  "authors": [
+    {
+      "name": "Kyshnerev",
+      "email": "DIMKYSH@MAIL.RU"
+    }
+  ],
+  "require": {
+    "php": ">= 5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "axiles89\\profiler\\": "lib/"
+    }
+  }
+}
