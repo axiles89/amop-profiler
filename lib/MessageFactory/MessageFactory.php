@@ -41,9 +41,9 @@ class MessageFactory implements IMessageFactory
                 $profiler[] = [
                     'type' => self::TYPE_LIGHT_MESSAGE,
                     'message' => $value['message'],
-                    'duration' => (int)($value['time'] - (int)$last['time']),
-                    'time_start' => (int)$last['time'],
-                    'time_end' => (int)$value['time']
+                    'duration' => round(($value['time'] - $last['time']) * 1000),
+                    'time_start' => round($last['time'] * 1000),
+                    'time_end' => round($value['time'] * 1000)
                 ];
             }
         }
