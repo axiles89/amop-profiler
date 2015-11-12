@@ -34,14 +34,10 @@ class Logger extends BaseLogger
             throw new \InvalidArgumentException("Type $type is incorrect");
         }
 
-        $cpu = getrusage();
-
         $this->_message[] = [
             'type' => $type,
             'message' => $name,
             'time' => microtime(true),
-            'memory' => memory_get_usage (true),
-            'cpu' => ($cpu['ru_utime.tv_usec'] + $cpu['ru_stime.tv_usec'])
         ];
     }
 
