@@ -43,7 +43,13 @@ class MessageFactory implements IMessageFactory
                     'message' => $value['message'],
                     'duration' => round(($value['time'] - $last['time']) * 1000),
                     'time_start' => round($last['time'] * 1000),
-                    'time_end' => round($value['time'] * 1000)
+                    'time_end' => round($value['time'] * 1000),
+                    'memory_start' => $last['memory'],
+                    'memory_end' => $value['memory'],
+                    'memory' => $value['memory'] - $last['memory'],
+                    'cpu_start' => $last['cpu'],
+                    'cpu_end' => $value['cpu'],
+                    'cpu' => $value['cpu'] - $last['cpu'],
                 ];
             }
         }
