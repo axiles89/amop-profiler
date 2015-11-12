@@ -49,11 +49,6 @@ class CurlSender implements ISender
         curl_setopt($curl, CURLOPT_HTTPHEADER, $this->getHeaders());
 
         $result = curl_exec($curl);
-
-        echo "<pre>";
-        print_r($result);
-        echo "</pre>";
-        die();
         $info = curl_getinfo($curl);
 
         if (curl_errno($curl)) {
